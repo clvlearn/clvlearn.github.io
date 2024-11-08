@@ -17,7 +17,7 @@
         body {
             font-family: 'Segoe UI', sans-serif;
             background-color: var(--light);
-			padding: 20px 80px;
+            padding: 20px 80px;
         }
 
         .header-container {
@@ -35,7 +35,7 @@
             align-items: center;
             justify-content: space-between;
             border-radius: 10px;
-			width: 100%;
+            width: 100%;
         }
 
         .header h1 {
@@ -65,8 +65,8 @@
         .card:hover {
             transform: translateY(-3px);
         }
-		
-		a {
+
+        a {
             color: var(--light);
             font-size: 1.2rem;
             margin-right: 1rem;
@@ -88,6 +88,10 @@
             font-size: 0.85rem;
             margin-bottom: 0;
         }
+
+        .sort-buttons {
+            margin-bottom: 20px;
+        }
     </style>
 </head>
 <body>
@@ -107,20 +111,53 @@
         </header>
     </div>
 
+    <!-- Sorting buttons -->
+    <div class="sort-buttons">
+        <button class="btn btn-primary" onclick="filterCards('Havo 2')">Havo 2</button>
+        <button class="btn btn-secondary" onclick="filterCards('Engels')">Engels</button>
+        <button class="btn btn-success" onclick="filterCards('grammatica')">Grammatica</button>
+        <button class="btn btn-danger" onclick="resetFilters()">Reset Filters</button>
+    </div>
+
     <!-- Main Content -->
     <div class="container my-4">
-        <div class="row g-3">
-		<a href='/irregular-verbs'>
-            <div class="col-md-4">
-                <div class="card h-100 text-center">
-                    <div class="card-body">
-                        <i>🌐</i>
-                        <h5 class="card-title">Irregular Verbs</h5>
-                        <p class="card-text">Irregular Verbs 1-90 (Havo 2)</p>
+        <div class="row g-3" id="content-container">
+            <a href='/irregular-verbs'>
+                <div class="col-md-4 card-container" data-keywords="Havo 2, Engels, grammatica">
+                    <div class="card h-100 text-center">
+                        <div class="card-body">
+                            <i class="subject-icon">🌐</i>
+                            <h5 class="card-title">Irregular Verbs</h5>
+                            <p class="card-text">Irregular Verbs 1-90 (Havo 2)</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-		</a>
+            </a>
+        </div>
+    </div>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Filter function for sorting cards based on keywords
+        function filterCards(keyword) {
+            const cards = document.querySelectorAll('.card-container');
+            cards.forEach(card => {
+                const keywords = card.getAttribute('data-keywords');
+                if (keywords.toLowerCase().includes(keyword.toLowerCase())) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // Reset all filters
+        function resetFilters() {
+            const cards = document.querySelectorAll('.card-container');
+            cards.forEach(card => {
+                card.style.display = 'block';
+            });
+        }
+    </script>
 </body>
 </html>
