@@ -1,2 +1,126 @@
-<h1>Hello World!</h1>
-<p>What are you looking for?</p>
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Oefenwebsite</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #e61c59;    
+            --secondary: #5ebbd7;  
+            --accent: #01a5ac;     
+            --light: #fff;         
+        }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: var(--light);
+			padding: 20px 80px;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+
+        .header {
+            background-color: var(--primary);
+            padding: 0.5rem 1rem;
+            color: var(--light);
+            text-align: left;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-radius: 10px;
+			width: 100%;
+        }
+
+        .header h1 {
+            font-size: 1.2rem;
+            margin: 0;
+        }
+
+        .bookmark-icons a {
+            color: var(--light);
+            font-size: 1.2rem;
+            margin-right: 1rem;
+            text-decoration: none;
+        }
+
+        .bookmark-icons a:hover {
+            color: var(--secondary);
+        }
+
+        .card {
+            border: 1px solid var(--secondary);
+            border-radius: 8px;
+            padding: 0.5rem;
+            transition: transform 0.2s ease;
+            font-size: 0.9rem;
+        }
+
+        .card:hover {
+            transform: translateY(-3px);
+        }
+		
+		a {
+            color: var(--light);
+            font-size: 1.2rem;
+            margin-right: 1rem;
+            text-decoration: none;
+        }
+
+        .subject-icon {
+            font-size: 1.5rem;
+            color: var(--accent);
+            margin: 0.5rem 0;
+        }
+
+        .card-title {
+            font-size: 1.1rem;
+            font-weight: bold;
+        }
+
+        .card-text {
+            font-size: 0.85rem;
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <div class="header-container">
+        <header class="header">
+            <div>
+                <h1><i class="fas fa-graduation-cap me-2"></i>School Oefenwebsite</h1>
+            </div>
+            <div class="bookmark-icons">
+                <a href="https://clv.magister.net" target="_blank" title="Magister"><i class="fas fa-school"></i></a>
+                <a href="https://clv.zportal.nl" target="_blank" title="Zermelo"><i class="fas fa-calendar-alt"></i></a>
+                <a href="https://office.com" target="_blank" title="Microsoft Office"><i class="fas fa-th"></i></a>
+                <a href="https://teams.microsoft.com" target="_blank" title="Microsoft Teams"><i class="fab fa-microsoft"></i></a>
+                <a href="https://outlook.com" target="_blank" title="Outlook"><i class="fas fa-envelope"></i></a>
+            </div>
+        </header>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container my-4">
+        <div class="row g-3">
+		<a href='/irregular-verbs'>
+            <div class="col-md-4">
+                <div class="card h-100 text-center">
+                    <div class="card-body">
+                        <i>🌐</i>
+                        <h5 class="card-title">Irregular Verbs</h5>
+                        <p class="card-text">Irregular Verbs 1-90 (Havo 2)</p>
+                    </div>
+                </div>
+            </div>
+		</a>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
