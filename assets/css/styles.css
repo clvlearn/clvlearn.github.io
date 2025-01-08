@@ -3,6 +3,7 @@
     --secondary: #e61c59;
     --primary-gradient: linear-gradient(135deg, #4f46e5, #e61c59);
     --secondary-gradient: linear-gradient(135deg, #e61c59, #ff4d82);
+    --tertiary-gradient: linear-gradient(90deg, #22c55e, #16a34a);
     --background: #f0f9ff;
     --card-bg: #ffffff;
     --text: #1e293b;
@@ -202,6 +203,20 @@ body {
     transform: translateY(-2px) scale(1.02);
     box-shadow: 0 6px 20px rgba(230, 28, 89, 0.4);
 }
+
+.btn-mavo-2 {
+    background: var(--tertiary-gradient); /* Voeg een nieuwe gradient toe in je CSS-variabelen */
+    color: white;
+    border: none;
+    box-shadow: 0 4px 15px rgba(34, 197, 94, 0.3); /* Groenachtige schaduw voor Mavo 2 */
+}
+
+.btn-mavo-2:hover {
+    color: white;
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 6px 20px rgba(34, 197, 94, 0.4); /* Intensere schaduw bij hover */
+}
+
 
 .small {
     font-size: 0.85rem;
